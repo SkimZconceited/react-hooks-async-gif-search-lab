@@ -2,6 +2,12 @@
 
 .DS_Store
 
+# Ignore npm configuration files
+node_modules/
+
+# Ignore package-lock files
+package-lock.json
+
 ### Node ###
 # Logs
 logs
