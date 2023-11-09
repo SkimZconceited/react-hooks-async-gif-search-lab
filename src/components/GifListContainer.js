@@ -10,13 +10,21 @@ function GifListContainer() {
     setGifs(results);
   }
 
-  console.log(gifs, "added successful");
+  // console.log(gifs, "added successful");
   return (
     <div>
       <h2>GifListContainer</h2>
       <GifSearch onSubmit={handleResults} />
 
-      {gifs.map((gif, index) => <ul key={index} style={{listStyle: "none"}}><GifList gifUrl={gif.images.original.url} gifTitle={gif.title} gifID={gif.id} /></ul>)}
+      {gifs.map((gif, index) => (
+        <ul key={index}>
+          <GifList
+            gifUrl={gif.images.original.url}
+            gifTitle={gif.title}
+            gifID={gif.id}
+          />
+        </ul>
+      ))}
     </div>
   );
 }
