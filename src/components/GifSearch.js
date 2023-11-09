@@ -5,7 +5,7 @@ function GifSearch({ onSubmit }) {
   const [searchTerm, setSearchTerm] = useState('')
 
   function handleInput(event) {
-    console.log(event.target.value)
+    // console.log(event.target.value)
     return setSearchTerm(event.target.value)
   }
 

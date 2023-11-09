@@ -6,7 +6,7 @@ function GifListContainer() {
   const [gifs, setGifs] = useState([]);
 
   function handleResults(results) {
-    console.log(results, "where I want it");
+    // console.log(results, "where I want it");
     setGifs(results);
   }
 
@@ -15,8 +15,8 @@ function GifListContainer() {
     <div>
       <h2>GifListContainer</h2>
       <GifSearch onSubmit={handleResults} />
-      
-      {gifs.map((gif, index) => <div key={index}><GifList gifUrl={gif.url} gifTitle={gif.title} gifID={gif.id} /></div>)}
+
+      {gifs.map((gif, index) => <ul key={index} style={{listStyle: "none"}}><GifList gifUrl={gif.images.original.url} gifTitle={gif.title} gifID={gif.id} /></ul>)}
     </div>
   );
 }
